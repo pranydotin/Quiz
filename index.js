@@ -27,6 +27,7 @@ $(".next").click(function (e) {
   console.log(this.type);
 
   if (err == 0) {
+    if (this.type == "submit") document.querySelector("form").submit();
     next_fs.show();
     // if (this.type == "submit") document.querySelector("form").submit();
     // }
