@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+        crossorigin="anonymous"
+        /> -->
+  </head>
+  <body>
+    <div class="container m-4 p-4">
+      <!-- multistep form -->
+      <form id="msform">
+        <!-- progressbar -->
+
+        <!-- fieldsets -->
+        <fieldset id="field1">
+          <!-- <h3 class="fs-subtitle">This is step 1</h3> -->
+          <div class="row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" />
+            <span class="error display-none">Name is required</span>
+          </div>
+
+          <div class="row">
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number"
+            />
+            <span class="error display-none">Invalid Phone</span>
+          </div>
+
+          <div class="row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <span class="error display-none">Invalid Email</span>
+          </div>
+
+          <input
+            type="button"
+            name="next"
+            class="next action-button"
+            value="Next"
+          />
+        </fieldset>
+
+        <fieldset id="field2">
+          <div class="row">
+            <span class="ques"> Do you have a current green card? * </span>
+            <br />
+            <div class="radio-row" id="green-card-row">
+              <div class="radio-col">
+                <input type="radio" id="green-yes" name="green-card" />
+                <label for="green-yes"> Yes </label>
+              </div>
+              <div class="radio-col">
+                <input type="radio" id="green-no" name="green-card" />
+                <label for="green-no"> No </label>
+              </div>
+              <div class="radio-col">
+                <input type="radio" id="green-other" name="green-card" />
+                <label for="green-other">
+                  No, but I am a lawful permenant resident and I just need to
+                  renew it or replace it.
+                </label>
+              </div>
+            </div>
+
+            <span class="error display-none">Select one option</span>
+          </div>
+
+          <input
+            type="button"
+            name="previous"
+            class="previous action-button"
+            value="Previous"
+          />
+          <input
+            type="button"
+            name="next"
+            class="next action-button"
+            value="Next"
+          />
+        </fieldset>
+
+        <!-- 3rd field -->
+
+        <fieldset id="field3">
+          <div class="row">
+            <span class="ques">
+              Have you been a green card holder for at least 5 years? *</span
+            >
+            <br />
+            <div class="radio-row" id="green-card-holder5-row">
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="green-card-5-yes"
+                  name="green-card-holder5"
+                />
+                <label for="green-card-5-yes"> Yes </label>
+              </div>
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="green-card-5-no"
+                  name="green-card-holder5"
+                />
+                <label for="green-card-5-no"> No </label>
+              </div>
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="green-card-5-other"
+                  name="green-card-holder5"
+                />
+                <label for="green-card-5-other">
+                  No, but I have been married to and living with a US citizen
+                  for three years or more and I have also had my green card for
+                  three years or more.
+                </label>
+              </div>
+            </div>
+
+            <span class="error display-none">Select one option</span>
+          </div>
+
+          <input
+            type="button"
+            name="previous"
+            class="previous action-button"
+            value="Previous"
+          />
+          <input
+            type="button"
+            name="next"
+            class="next action-button"
+            value="Next"
+          />
+        </fieldset>
+        <!-- 4th -->
+        <fieldset id="field4">
+          <div class="row">
+            <span class="ques">
+              Have you ever been arrested or charged with a crime (other than
+              minor traffic tickets) since you got your green card? *</span
+            >
+            <br />
+            <div class="radio-row" id="green-card-arrested-row">
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="green-card-arrested-yes"
+                  name="green-card-arrested"
+                />
+                <label for="green-card-arrested-yes"> Yes </label>
+              </div>
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="green-card-arrested-no"
+                  name="green-card-arrested"
+                />
+                <label for="green-card-arrested-no"> No </label>
+              </div>
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="green-card-arrested-other"
+                  name="green-card-arrested"
+                />
+                <label for="green-card-arrested-other"> I don't know </label>
+              </div>
+            </div>
+
+            <span class="error display-none">Select one option</span>
+          </div>
+
+          <input
+            type="button"
+            name="previous"
+            class="previous action-button"
+            value="Previous"
+          />
+          <input
+            type="button"
+            name="next"
+            class="next action-button"
+            value="Next"
+          />
+        </fieldset>
+        <!-- 5ths -->
+        <fieldset id="field5">
+          <div class="row">
+            <span class="ques">
+              Are you late on your federal or state taxes for any year since you
+              got your green card? *
+            </span>
+            <br />
+            <div class="radio-row" id="federal-state-tax-row">
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="federal-state-yes"
+                  name="federal-state-tax"
+                />
+                <label for="federal-state-yes"> Yes </label>
+              </div>
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="federal-state-no"
+                  name="federal-state-tax"
+                />
+                <label for="federal-state-no"> No </label>
+              </div>
+            </div>
+
+            <span class="error display-none">Select one option</span>
+          </div>
+
+          <input
+            type="button"
+            name="previous"
+            class="previous action-button"
+            value="Previous"
+          />
+          <input
+            type="button"
+            name="next"
+            class="next action-button"
+            value="Next"
+          />
+        </fieldset>
+        <!-- 6ths -->
+        <fieldset id="field6">
+          <div class="row">
+            <span class="ques"> Are you late on child support? * </span>
+            <br />
+            <div class="radio-row" id="child-support-row">
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="child-support-yes"
+                  name="child-support"
+                />
+                <label for="child-support-yes"> Yes </label>
+              </div>
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="child-support-no"
+                  name="child-support"
+                />
+                <label for="child-support-no"> No </label>
+              </div>
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="child-support-other"
+                  name="child-support"
+                />
+                <label for="child-support-other">
+                  I don't owe and have never owed child support.
+                </label>
+              </div>
+            </div>
+
+            <span class="error display-none">Select one option</span>
+          </div>
+
+          <input
+            type="button"
+            name="previous"
+            class="previous action-button"
+            value="Previous"
+          />
+          <input
+            type="button"
+            name="next"
+            class="next action-button"
+            value="Next"
+          />
+        </fieldset>
+        <!-- 7ths -->
+        <fieldset id="field7">
+          <div class="row">
+            <span class="ques">
+              Have you ever travelled outside the United States during the past
+              five (5) years? *
+            </span>
+            <br />
+            <div class="radio-row" id="outside-us-row">
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="outside-us-yes"
+                  name="outside-us"
+                  value="yes"
+                />
+                <label for="outside-us-yes"> Yes </label>
+              </div>
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="outside-us-no"
+                  name="outside-us"
+                  value="no"
+                />
+                <label for="outside-us-no"> No </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row display-none" id="more-than-6-months-row">
+            <span class="ques">
+              Has any one of your trips outside of the United States lasted
+              longer than 6 months? *
+            </span>
+            <br />
+            <div class="radio-row" id="outside-us-6months-row">
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="outside-us6-month-yes"
+                  name="outside-us6-month"
+                />
+                <label for="outside-us6-month-yes"> Yes </label>
+              </div>
+              <div class="radio-col">
+                <input
+                  type="radio"
+                  id="outside-us6-month-no"
+                  name="outside-us6-month"
+                />
+                <label for="outside-us6-month-no"> No </label>
+              </div>
+            </div>
+          </div>
+          <span class="error display-none" id="field7error">
+            Select one option
+          </span>
+
+          <input
+            type="button"
+            name="previous"
+            class="previous action-button"
+            value="Previous"
+          />
+          <input
+            type="button"
+            name="next"
+            class="next action-button"
+            value="Next"
+          />
+        </fieldset>
+      </form>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+      integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
