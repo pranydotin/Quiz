@@ -137,7 +137,7 @@ span.error {
   font-size: 15px;
   line-height: 20px;
   border-color: rgba(17, 17, 17, 0.2);
-  background: transparent;
+  background: #ffffffab;
   color: rgb(17, 17, 17);
   opacity: 1;
   outline: none;
