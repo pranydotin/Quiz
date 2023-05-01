@@ -7,13 +7,13 @@ $(".next").click(function (e) {
   e.preventDefault();
   // if (animating) return false;
   animating = true;
-  current_fs = $(this).parent();
-  next_fs = $(this).parent().next();
+  current_fs = $(this).parent().parent();
+  next_fs = $(this).parent().parent().next();
 
   console.log(next_fs);
   // const err = 0;
 
-  const err = validate(this.parentElement.id);
+  const err = validate(this.parentElement.parentElement.id);
 
   console.log(err);
   console.log(!err);
@@ -65,9 +65,9 @@ $(".previous").click(function () {
   // if (animating) return false;
   animating = true;
 
-  current_fs = $(this).parent();
+  current_fs = $(this).parent().parent();
 
-  previous_fs = $(this).parent().prev();
+  previous_fs = $(this).parent().parent().prev();
 
   //de-activate current step on progressbar
   $("#progressbar li")
@@ -75,7 +75,7 @@ $(".previous").click(function () {
     .removeClass("active");
 
   //show the previous fieldset
-  previous_fs.show();
+
   //hide the current fieldset with style
   current_fs.animate(
     { opacity: 0 },
@@ -103,6 +103,7 @@ $(".previous").click(function () {
       easing: "easeInOutBack",
     }
   );
+  previous_fs.show();
 });
 
 function validate(field) {

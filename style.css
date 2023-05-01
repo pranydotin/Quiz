@@ -53,7 +53,7 @@ body {
 
 /*buttons*/
 #msform .action-button {
-  border-radius: 4px;
+  border-radius: 5px;
   border: 1px solid #00293f;
   color: rgb(255, 255, 255);
   font-family: inherit;
@@ -64,8 +64,15 @@ body {
   cursor: pointer;
   font-weight: bold;
   font-size: 18px;
+  width: 50%;
 }
-
+#msform #field1 .action-button {
+  width: 100%;
+}
+.rowbtn {
+  display: flex;
+  gap: 20px;
+}
 #msform .action-button:hover,
 #msform .action-button:focus {
   /* box-shadow: 0 0 0 2px white, 0 0 0 3px #2a20b8; */
