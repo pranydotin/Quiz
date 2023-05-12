@@ -259,3 +259,8 @@ document.querySelectorAll("[name='outside-us']").forEach((a) =>
     }
   })
 );
+document
+  .querySelectorAll(".blank")
+  .forEach((btn) =>
+    btn.addEventListener("click", (e) => e.target.nextElementSibling.click())
+  );
